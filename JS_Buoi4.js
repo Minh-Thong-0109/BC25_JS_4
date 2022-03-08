@@ -296,31 +296,87 @@ document.getElementById("do-khoang-cach").onclick = function () {
   }
   var maxKc = Math.max.apply(Math, kc);
   var minKc = Math.min.apply(Math, kc);
+  var lenmax = 0;
+  var lenmin = 0;
+  var lentb = 0;
   for (j = 0; j < 3; j++) {
-    kc[j] == maxKc ? vtmax.push(j) : vtmax.push("");
-    kc[j] == minKc ? vtmin.push(j) : vtmin.push("");
-    kc[j] != maxKc && kc[j] != minKc ? vttb.push(j) : vttb.push("");
+    kc[j] == maxKc ? vtmax.push(j + 1) : vtmax.push("");
+    kc[j] == minKc ? vtmin.push(j + 1) : vtmin.push("");
+    kc[j] != maxKc && kc[j] != minKc ? vttb.push(j + 1) : vttb.push("");
+    vtmax[j] != "" ? (lenmax = lenmax + 1) : (lenmax = lenmax);
+    vtmin[j] != "" ? (lenmin = lenmin + 1) : (lenmin = lenmin);
+    vttb[j] != "" ? (lentb = lentb + 1) : (lentb = lentb);
   }
-  var vtmaxc = vtmax.join("");
-  var vtminc = vtmin.join("");
-  var vttbc = vttb.join("");
-  document.getElementById("ket-qua-do").innerHTML =
-    "<div class='alert alert-success'><h5>Khoảng cách từ nhà đến trường " +
-    trg +
-    " của các bạn sinh viên lần lượt là: </h5>" +
-    "<p>Bạn xa trường nhất: <span class='text-danger'><b>" +
-    tsv[vtmaxc] +
-    "</b></span> với khoảng cách là <span class='text-danger'><b>" +
-    maxKc.toFixed(2) +
-    " km</b></span></p>" +
-    "<p>Bạn gần trường nhất: <span class='text-danger'><b>" +
-    tsv[vtminc] +
-    "</b></span> với khoảng cách là <span class='text-danger'><b>" +
-    minKc.toFixed(2) +
-    " km</b></span></p>" +
-    "<p>Và bạn còn lại là: <span class='text-danger'><b>" +
-    tsv[vttbc] +
-    "</b></span> có khoảng cách từ nhà đến trường là <span class='text-danger'><b>" +
-    kc[vttbc].toFixed(2) +
-    " km</b></span></p></div>";
+  console.log(vtmax, lenmax);
+  console.log(vtmin, lenmin);
+  console.log(vttb, lentb);
+  if (lenmax == 3) {
+    document.getElementById("ket-qua-do").innerHTML =
+      "<p class='alert alert-success'>Khoảng cách từ nhà đến trường của 3 bạn là như nhau và đều bằng " +
+      kc[0].toFixed(2) +
+      " km</p>";
+  } else if (lenmax == 2) {
+    vtminc = vtmin.join("") - 1;
+    vtmaxc = [0, 1, 2];
+    vtmaxc.splice(vtmaxc.indexOf(vtminc), 1);
+    document.getElementById("ket-qua-do").innerHTML =
+      "<div class='alert alert-success'><h5>Khoảng cách từ nhà đến trường " +
+      trg +
+      " của các bạn sinh viên lần lượt là: </h5>" +
+      "<p>Có 2 bạn có nhà xa trường nhất gồm: <span class='text-danger'><b>" +
+      tsv[vtmaxc[0]] +
+      "</b></span> và <span class='text-danger'><b>" +
+      tsv[vtmaxc[1]] +
+      "</b></span> với khoảng cách đều là <span class='text-danger'><b>" +
+      maxKc.toFixed(2) +
+      " km</b></span></p>" +
+      "<p>Bạn gần trường nhất: <span class='text-danger'><b>" +
+      tsv[vtminc] +
+      "</b></span> với khoảng cách là <span class='text-danger'><b>" +
+      minKc.toFixed(2) +
+      " km</b></span></p>";
+  } else if (lenmin == 2) {
+    vtmaxc = vtmax.join("") - 1;
+    vtminc = [0, 1, 2];
+    vtminc.splice(vtminc.indexOf(vtmaxc), 1);
+    document.getElementById("ket-qua-do").innerHTML =
+      "<div class='alert alert-success'><h5>Khoảng cách từ nhà đến trường " +
+      trg +
+      " của các bạn sinh viên lần lượt là: </h5>" +
+      "<p>Bạn xa trường nhất: <span class='text-danger'><b>" +
+      tsv[vtmaxc] +
+      "</b></span> với khoảng cách là <span class='text-danger'><b>" +
+      maxKc.toFixed(2) +
+      " km</b></span></p>" +
+      "<p>Có 2 bạn có nhà gần trường nhất gồm: <span class='text-danger'><b>" +
+      tsv[vtminc[0]] +
+      "</b></span> và <span class='text-danger'><b>" +
+      tsv[vtminc[1]] +
+      "</b></span> với khoảng cách đều là <span class='text-danger'><b>" +
+      minKc.toFixed(2) +
+      " km</b></span></p>";
+  } else {
+    var vtmaxc = vtmax.join("")-1;
+    var vtminc = vtmin.join("")-1;
+    var vttbc = vttb.join("")-1;
+    document.getElementById("ket-qua-do").innerHTML =
+      "<div class='alert alert-success'><h5>Khoảng cách từ nhà đến trường " +
+      trg +
+      " của các bạn sinh viên lần lượt là: </h5>" +
+      "<p>Bạn xa trường nhất: <span class='text-danger'><b>" +
+      tsv[vtmaxc] +
+      "</b></span> với khoảng cách là <span class='text-danger'><b>" +
+      maxKc.toFixed(2) +
+      " km</b></span></p>" +
+      "<p>Bạn gần trường nhất: <span class='text-danger'><b>" +
+      tsv[vtminc] +
+      "</b></span> với khoảng cách là <span class='text-danger'><b>" +
+      minKc.toFixed(2) +
+      " km</b></span></p>" +
+      "<p>Và bạn còn lại là: <span class='text-danger'><b>" +
+      tsv[vttbc] +
+      "</b></span> có khoảng cách từ nhà đến trường là <span class='text-danger'><b>" +
+      kc[vttbc].toFixed(2) +
+      " km</b></span></p></div>";
+  }
 };
