@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>BC25_JS_Buoi 4</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <br><br><br>
+    <!-- Bài tập 1 -->
+    <section id="bt1" class="container row">
+        <div class="col-12">
+            <h2 class="text-danger">Bài tập 1: Sắp xếp thứ tự</h2>
+        </div>
+        <div class="card col-md-6 col-12">
+            <div class="card-header text-primary container">
+                <h4>Xếp thứ tự tăng dần</h4>
+            </div>
+            <div class="card-body">
+                <div class="form-group row">
+                    <label class="col-12" for="">Vui lòng nhập số bạn muốn sắp xếp</label>
+                    <input id="st1" type="number" class="form-control col-md-4 col-12" name="" aria-describedby="helpId"
+                        placeholder="">
+                    <input id="st2" type="number" class="form-control col-md-4 col-12" name="" aria-describedby="helpId"
+                        placeholder="">
+                    <input id="st3" type="number" class="form-control col-md-4 col-12" name="" aria-describedby="helpId"
+                        placeholder="">
+                    <small id="helpId" class="form-text text-muted">Các số
+                        thập phân được phân cách bởi dấu "." (Ví dụ: 5.25, 4.5, 8.75,...)</small>
+                </div>
+            </div>
+            <button id="sap-xep" class="btn btn-success">Bắt đầu sắp xếp</button>
+            <div id="ket-qua-sap-xep" class="card-footer">
+
+            </div>
+        </div>
+        <div class="alert-info col-md-6 col-12">
+            <p>B1: Thiết lập layout có trường nhập 3 số cần sắp xếp theo dạng number</p>
+            <p>B2: Thiết lập nút bấm khởi tạo chương trình</p>
+            <p>B3: Viết chương trình DOM giá trị 3 số và ghép 3 giá trị đó vào 1 mảng chung</p>
+            <p>B4: So sánh các số có trong mảng bằng hàm sort(), kết hợp công thức đảo vị trí mảng, kết quả cuối cùng ta được 1 mảng có giá trị từ nhỏ đến lớn</p>
+            <p>B5: Xuất mảng vào ô Footer</p>
+        </div>
+    </section>
+    <br><br><br>
+    <hr>
+    <br><br><br>
+    <!-- Bài tập 2 -->
+    <section id="bt2" class="container row">
+        <div class="col-12">
+            <h2 class="text-danger">Bài tập 2: Nhận diện người đăng nhập</h2>
+        </div>
+        <div class="card col-md-6 col-12">
+            <div class="card-header text-primary container">
+                <h4>Say hi!</h4>
+            </div>
+            <div class="card-body">
+                <div class="form-group row">
+                    <label class="col-12" for="">Vui lòng xác nhận giúp tôi bạn là ai</label>
+                    <select class="form-control" id="nhan-dien">
+                        <option value="B">Trụ cột gia đình</option>
+                        <option value="M">Cái gì cũng phải tới tay tui!</option>
+                        <option value="A">Thằng ăn hại</option>
+                        <option value="E">Thiên thần nhỏ</option>
+                    </select>
+                </div>
+            </div>
+            <button id="gui-loi-chao" class="btn btn-success">Bắt đầu sắp xếp</button>
+            <div id="chao" class="card-footer">
+
+            </div>
+        </div>
+        <div class="alert-info col-md-6 col-12">
+            <p>B1: Thiết lập layout có trường nhập tên người đăng nhập theo dạng select</p>
+            <p>B2: Thiết lập nút bấm khởi tạo chương trình</p>
+            <p>B3: Viết chương trình DOM giá trị của các select và lấy giá trị so sánh điều kiện để đưa ra kết quả tương ứng</p>
+            <p>B4: Xuất câu chào tương ứng cho từng giá trị select vào ô Footer</p>
+        </div>
+    </section>
+    <br><br><br>
+    <hr>
+    <br><br><br>
+    <!-- Bài tập 3 -->
+    <section id="bt3" class="container row">
+        <div class="col-12">
+            <h2 class="text-danger">Bài tập 3: Đếm số chẵn, lẻ</h2>
+        </div>
+        <div class="card col-md-6 col-12">
+            <div class="card-header text-primary container">
+                <h4>Số lượng số chẵn và lẻ</h4>
+            </div>
+            <div class="card-body">
+                <div class="form-group row">
+                    <label class="col-12" for="">Nhập các số bạn cần xem xét</label>
+                    <input id="s1" type="number" class="form-control col-md-4 col-12" name="" aria-describedby="helpId"
+                        placeholder="">
+                    <input id="s2" type="number" class="form-control col-md-4 col-12" name="" aria-describedby="helpId"
+                        placeholder="">
+                    <input id="s3" type="number" class="form-control col-md-4 col-12" name="" aria-describedby="helpId"
+                        placeholder="">
+                    <small id="helpId" class="form-text text-muted">Số cần xét là 1 nguyên, Các số
+                        thập phân được phân cách bởi dấu "." (Ví dụ: 5.25, 4.5, 8.75,...) không được tính là 1 số chẵn
+                        hoặc lẻ</small>
+                </div>
+            </div>
+            <button id="xem-xet" class="btn btn-success">Bắt đầu phân loại</button>
+            <div id="xuat-ket-qua" class="card-footer">
+
+            </div>
+        </div>
+        <div class="alert-info col-md-6 col-12">
+            <p>B1: Thiết lập layout có trường nhập số theo dạng number</p>
+            <p>B2: Thiết lập nút bấm khởi tạo chương trình</p>
+            <p>B3: Viết chương trình DOM giá trị các số đã nhập và gán các số vào mảng chung array[]</p>
+            <p>B4: Thiết lập thêm các mảng trống bao gồm: sc:đại diện cho số chẵn, sl: đại diện cho số lẻ, ktx: đại diện cho các số không phải là số nguyên mà người nhập vô tình bỏ vào</p>
+            <p>B5: Lọc các giá trị vào từng mảng theo phân loại, các số có hiệu của nó với số nguyên làm tròn từ nó lớn hơn không sẽ được cho vô mảng ktx, các số chia hết cho 2 vào mảng sc và còn lại vào mảng số lẻ</p>
+            <p>B6: Xuất số lượng các số đếm được theo chiều dài các mảng và gán vào ô Footer để xuất thông báo</p>
+        </div>
+    </section>
+    <br><br><br>
+    <hr>
+    <br><br><br>
+    <!-- Bài tập 4 -->
+    <section id="bt4" class="container row">
+        <div class="col-12">
+            <h2 class="text-danger">Bài tập 4: Phân loại tam giác</h2>
+        </div>
+        <div class="card col-md-6 col-12">
+            <div class="card-header text-primary container">
+                <h4>Phân loại tam giác</h4>
+            </div>
+            <div class="card-body">
+                <div class="form-group row">
+                    <label class="col-12" for="">Vui lòng thông số 3 cạnh tam giác bạn muốn phân loại</label>
+                    <input id="c1" type="number" class="form-control col-md-4 col-12" name="" aria-describedby="helpId"
+                        placeholder="">
+                    <input id="c2" type="number" class="form-control col-md-4 col-12" name="" aria-describedby="helpId"
+                        placeholder="">
+                    <input id="c3" type="number" class="form-control col-md-4 col-12" name="" aria-describedby="helpId"
+                        placeholder="">
+                    <small id="helpId" class="form-text text-muted">Thông số cạnh là 1 số dương, Các số
+                        thập phân được phân cách bởi dấu "." (Ví dụ: 5.25, 4.5, 8.75,...)</small>
+                </div>
+            </div>
+            <button id="phan-loai" class="btn btn-success">Phân loại</button>
+            <div id="ket-qua-phan-loai" class="card-footer">
+
+            </div>
+        </div>
+        <div class="alert-info col-md-6 col-12">
+            <p>B1: Thiết lập layout có trường nhập 3 cạnh cần xét theo dạng number</p>
+            <p>B2: Thiết lập nút bấm khởi tạo chương trình</p>
+            <p>B3: Viết chương trình DOM giá trị các cạnh và đưa các giá trị đó vào mảng</p>
+            <p>B4: Sắp xếp mảng theo giá trị tăng dần để xác định cạnh lớn nhất</p>
+            <p>B5: Xét xem người nhập có nhập cạnh bằng 0 hay số âm thì trả về kết quả không thể tính</p>
+            <p>B6: Sau khi loại các trường hợp không phải là độ dài cạnh, bắt đầu so sánh với các điều kiện để đưa ra được đó là tam giác gì hay chỉ là 1 đường thẳng</p>
+            <p>B5: Xuất kết luận cuối cùng vào ô Footer</p>
+        </div>
+    </section>
+    <br><br><br>
+    <hr>
+    <!-- Bài tập 5 -->
+    <section id="bt5" class="container row">
+        <div class="col-12">
+            <h2 class="text-danger">Bài tập 5: Tra cứu ngày tháng năm</h2>
+        </div>
+        <div class="card col-md-6 col-12">
+            <div class="card-header text-primary container">
+                <h4>Tra cứu ngày trước đó và kế tiếp</h4>
+            </div>
+            <div class="card-body">
+                <div class="form-group row">
+                    <label class="col-12" for="">Vui lòng nhập thông số Ngày tháng năm vào ô bên dưới</label>
+                    <input id="date" type="date" class="form-control col-12" name="" aria-describedby="helpId"
+                        placeholder="">
+                </div>
+            </div>
+            <button id="tra-cuu" class="btn btn-success">Tra cứu</button>
+            <div id="ket-qua-tra-cuu" class="card-footer">
+
+            </div>
+        </div>
+        <div class="alert-info col-md-6 col-12">
+            <p>B1: Thiết lập layout có trường nhập ngàytheo dạng date</p>
+            <p>B2: Thiết lập nút bấm khởi tạo chương trình</p>
+            <p>B3: Viết chương trình DOM giá trị là ngày(valueAsDate) của ngày nhập vào</p>
+            <p>B4: Xem xét ngày nhập vào có tồn tại hay không, nếu không trả kết quả k tồn tại vào ô Footer</p>
+            <p>B5: Xét các ngày hợp lệ, dùng các hàm getDate, getMonth, getFullYear để lấy từng giá trị ngày, tháng, năm của ngày nhập vào</p>
+            <p>B6: Tạo lập ngày trước đó và ngày tiếp theo bằng công thức new Date()</p>
+            <p>B7: Định dạng ngày xuất ra theo format dd/mm/yyyy</p>
+            <p>B8: Xuất các giá trị ngày trước đó và ngày tiếp theo vào Footer</p>
+        </div>
+    </section>
+    <br><br><br>
+    <hr>
+    <!-- Bài tập 6 -->
+    <section id="bt6" class="container row">
+        <div class="col-12">
+            <h2 class="text-danger">Bài tập 6: Đếm số ngày có trong 1 tháng</h2>
+        </div>
+        <div class="card col-md-6 col-12">
+            <div class="card-header text-primary container">
+                <h4>Đếm số ngày có trong tháng</h4>
+            </div>
+            <div class="card-body">
+                <div class="form-group row">
+                    <label class="col-12" for="">Vui lòng nhập tháng và năm tương ứng vào ô bên dưới</label>
+                    <input id="month" type="month" class="form-control col-12" name="" aria-describedby="helpId"
+                        placeholder="">
+                </div>
+            </div>
+            <button id="dem-ngay" class="btn btn-success">Tra cứu</button>
+            <div id="ket-qua-dem-ngay" class="card-footer">
+
+            </div>
+        </div>
+        <div class="alert-info col-md-6 col-12">
+            <p>B1: Thiết lập layout có trường nhập tháng năm theo dạng month</p>
+            <p>B2: Thiết lập nút bấm khởi tạo chương trình</p>
+            <p>B3: Viết chương trình DOM giá trị tháng và năm, sử dụng các hàm getDate, gatMonth và getFullYear để lấy ngày, tháng, năm</p>
+            <p>B4: Tạo lập giá trị ngày cuối cùng của tháng bằng cách lấy ngày đầu tháng của tháng tiếp theo trừ 1</p>
+            <p>B5: Xuất giá trị ngày cuối cùng của tháng cũng chính là số ngày trong tháng nhập vào ô Footer</p>
+        </div>
+    </section>
+    <br><br><br>
+    <hr>
+    <!-- Bài tập 7 -->
+    <section id="bt7" class="container row">
+        <div class="col-12">
+            <h2 class="text-danger">Bài tập 7: Chuyển số thành chữ</h2>
+        </div>
+        <div class="card col-md-6 col-12">
+            <div class="card-header text-primary container">
+                <h4>Đọc số thành chữ</h4>
+            </div>
+            <div class="card-body">
+                <div class="form-group row">
+                    <label class="col-12" for="">Vui lòng nhập số bạn muốn đọc vào ô bên dưới</label>
+                    <input id="so" type="number" class="form-control col-12" name="" aria-describedby="helpId"
+                        placeholder="">
+                    <small id="helpId" class="form-text text-muted">Số cần đọc phải là 1 số nguyên có ít hơn 4 chữ
+                        số</small>
+                </div>
+            </div>
+            <button id="chuyen-so" class="btn btn-success">Bắt đầu chuyển</button>
+            <div id="ket-qua-chuyen-so" class="card-footer">
+
+            </div>
+        </div>
+        <div class="alert-info col-md-6 col-12">
+            <p>B1: Thiết lập layout có trường nhập số theo dạng number</p>
+            <p>B2: Thiết lập nút bấm khởi tạo chương trình</p>
+            <p>B3: Viết chương trình DOM giá trị số nhập và trị tuyệt đối của số nhập</p>
+            <p>B4: Xét số nhập có phải là số nguyên dưới 4 chữ số không, nếu không thì thông báo ra Footer</p>
+            <p>B5: Xét số đủ điều kiện, sử dụng vào lặp và điều kiện để đọc số thành chữ</p>
+            <p>B6: Xét số nhập là âm hay dương để thêm chữ âm vào trước cho số âm</p>
+            <p>B7: Xuất giá trị đã đọc thành chữ ra Footer</p>
+        </div>
+    </section>
+    <br><br><br>
+    <hr>
+    <!-- Bài tập 8 -->
+    <section id="bt8" class="container row">
+        <div class="col-12">
+            <h2 class="text-danger">Bài tập 8: Tính khoảng cách</h2>
+        </div>
+        <div class="card col-md-6 col-12">
+            <div class="card-header text-primary container">
+                <h4>Tìm nhà sinh viên xa trường nhất</h4>
+            </div>
+            <div class="card-body">
+                <div class="form-group row">
+                    <label class="col-12" for="">Vui lòng nhập lần lượt thông tin của các sinh viên cần xét vào các ô
+                        bên dưới</label>
+                    <div class="row">
+                        <label class="col-12 text-info" for="">
+                            <h5>Thông tin của sinh viên 1</h5>
+                        </label>
+                        <input class="col-12" id="sv1" type="text" class="form-control col-12" name=""
+                            aria-describedby="helpId" placeholder="Họ và tên">
+                        <input class="col-6" id="sv1x" type="number" class="form-control col-12" name=""
+                            aria-describedby="helpId" placeholder="Tọa độ x">
+                        <input class="col-6" id="sv1y" type="number" class="form-control col-12" name=""
+                            aria-describedby="helpId" placeholder="Tọa độ y">
+                    </div>
+                    <br>
+                    <div class="row">
+                        <label class="col-12 text-info" for="">
+                            <h5>Thông tin của sinh viên 2</h5>
+                        </label>
+                        <input class="col-12" id="sv2" type="text" class="form-control col-12" name=""
+                            aria-describedby="helpId" placeholder="Họ và tên">
+                        <input class="col-6" id="sv2x" type="number" class="form-control col-12" name=""
+                            aria-describedby="helpId" placeholder="Tọa độ x">
+                        <input class="col-6" id="sv2y" type="number" class="form-control col-12" name=""
+                            aria-describedby="helpId" placeholder="Tọa độ y">
+                    </div>
+                    <br>
+                    <div class="row">
+                        <label class="col-12 text-info" for="">
+                            <h5>Thông tin của sinh viên 3</h5>
+                        </label>
+                        <input class="col-12" id="sv3" type="text" class="form-control col-12" name=""
+                            aria-describedby="helpId" placeholder="Họ và tên">
+                        <input class="col-6" id="sv3x" type="number" class="form-control col-12" name=""
+                            aria-describedby="helpId" placeholder="Tọa độ x">
+                        <input class="col-6" id="sv3y" type="number" class="form-control col-12" name=""
+                            aria-describedby="helpId" placeholder="Tọa độ y">
+                    </div>
+                    <br>
+                    <div class="row">
+                        <label class="col-12" for="">Vui lòng nhập thông tin trường học vào bên dưới</label>
+                        <input class="col-12" id="trg" type="text" class="form-control col-12" name=""
+                            aria-describedby="helpId" placeholder="Tên trường">
+                        <input class="col-6" id="trgx" type="number" class="form-control col-12" name=""
+                            aria-describedby="helpId" placeholder="Tọa độ x">
+                        <input class="col-6" id="trgy" type="number" class="form-control col-12" name=""
+                            aria-describedby="helpId" placeholder="Tọa độ y">
+                    </div>
+                </div>
+            </div>
+            <button id="do-khoang-cach" class="btn btn-success">Bắt đầu chuyển</button>
+            <div id="ket-qua-do" class="card-footer">
+
+            </div>
+        </div>
+        <div class="alert-info col-md-6 col-12">
+            <p>B1: Thiết lập layout có trường nhập họ và tên, tọa độ x, tọa độ y của 3 sinh viên và trường học, với họ và tên theo dạng text và tọa độ theo dạng number</p>
+            <p>B2: Thiết lập nút bấm khởi tạo chương trình</p>
+            <p>B3: Viết chương trình DOM giá trị tọa độ và tên của trường</p>
+            <p>B4: Sử dụng vòng lặp để DOM các giá trị khoảng cách(bằng cách lấy căn bậc 2 của tổng bình phương 2 hiệu tọa độ tương ứng với tọa dộ trường, sử dụng các công thức sqrt,pow) và tên sinh viên theo 2 mảng khoảng cách và tên sinh viên</p>
+            <p>B5: Sử dụng công thức max.apply và min.apply để lấy giá trị khoảng cách lớn nhất và nhỏ nhất trong mảng khoảng cách</p>
+            <p>B6: Sử dụng vòng lặp để trả về vị trí của các giá trị lớn nhất và nhỏ nhất có trong mảng khoảng cách</p>
+            <p>B7: Sử dụng vị trí lấy được để lấy giá trị trong mảng tên sinh viên tương ứng</p>
+            <p>B8: Các giá trị còn lại là bạn có nhà không xa cũng không gần nhất trường</p>
+            <p>B9: Xuất các giá trị muốn hiển thị vào ô Footer</p>
+        </div>
+    </section>
+    <br><br><br>
+
+    <div>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+        <!-- My JS -->
+        <script src="./JS_Buoi4.js"></script>
+    </div>
+
+
+</body>
+
+</html>
