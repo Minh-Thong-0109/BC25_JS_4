@@ -235,7 +235,8 @@ document.getElementById("chuyen-so").onclick = function () {
     } else if (tapChu[1] == "một") {
       tapChu[1] = "mười ";
     } else if (
-      tapChu[0] == "không" &&
+      tapChu[0] != "không" &&
+      tapChu[0] != "" &&
       tapChu[1] == "không" &&
       tapChu[2] != "không"
     ) {
@@ -247,10 +248,16 @@ document.getElementById("chuyen-so").onclick = function () {
       tapChu[1] != "không" &&
       tapChu[1] != "mười " &&
       tapChu[1] != "" &&
+      tapChu[1] != "linh " &&
       tapChu[2] == "một"
     ) {
       tapChu[2] = "mốt";
-    } else if (tapChu[1] != "không" && tapChu[1] != "" && tapChu[2] == "năm") {
+    } else if (
+      tapChu[1] != "không" &&
+      tapChu[1] != "" &&
+      tapChu[1] != "linh " &&
+      tapChu[2] == "năm"
+    ) {
       tapChu[2] = "lăm";
     } else if (tapChu[2] == "không") {
       tapChu[2] = "";
@@ -356,9 +363,9 @@ document.getElementById("do-khoang-cach").onclick = function () {
       minKc.toFixed(2) +
       " km</b></span></p>";
   } else {
-    var vtmaxc = vtmax.join("")-1;
-    var vtminc = vtmin.join("")-1;
-    var vttbc = vttb.join("")-1;
+    var vtmaxc = vtmax.join("") - 1;
+    var vtminc = vtmin.join("") - 1;
+    var vttbc = vttb.join("") - 1;
     document.getElementById("ket-qua-do").innerHTML =
       "<div class='alert alert-success'><h5>Khoảng cách từ nhà đến trường " +
       trg +
