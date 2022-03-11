@@ -204,28 +204,23 @@ document.getElementById("chuyen-so").onclick = function () {
     var tapSo = [soHt, soHc, soDv];
     var len = tapSo.length;
     var tapChu = [];
+    var tapNentang = [
+      "không",
+      "một",
+      "hai",
+      "ba",
+      "bốn",
+      "năm",
+      "sáu",
+      "bảy",
+      "tám",
+      "chín",
+    ];
+    var tapChu = [];
+    var len = tapSo.length;
     for (var i = 0; i < len; i++) {
-      if (tapSo[i] == 0) {
-        tapChu.push("không");
-      } else if (tapSo[i] == 1) {
-        tapChu.push("một");
-      } else if (tapSo[i] == 2) {
-        tapChu.push("hai");
-      } else if (tapSo[i] == 3) {
-        tapChu.push("ba");
-      } else if (tapSo[i] == 4) {
-        tapChu.push("bốn");
-      } else if (tapSo[i] == 5) {
-        tapChu.push("năm");
-      } else if (tapSo[i] == 6) {
-        tapChu.push("sáu");
-      } else if (tapSo[i] == 7) {
-        tapChu.push("bảy");
-      } else if (tapSo[i] == 8) {
-        tapChu.push("tám");
-      } else {
-        tapChu.push("chín");
-      }
+      console.log(tapNentang[tapSo[i]]);
+      tapChu.push(tapNentang[tapSo[i]]);
     }
     tapChu[0] != "không"
       ? (tapChu[0] = tapChu[0] + " trăm ")
@@ -387,3 +382,4 @@ document.getElementById("do-khoang-cach").onclick = function () {
       " km</b></span></p></div>";
   }
 };
+
