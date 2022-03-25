@@ -101,9 +101,7 @@ document.getElementById("phan-loai").onclick = function () {
     document.getElementById("ket-qua-phan-loai").innerHTML =
       "<span class='text-success'>Đây là </span><span class='text-danger'>tam giác đều</span>";
   } else if (
-    Number(chuoiTra[0]) == Number(chuoiTra[1]) &&
-    Number(chuoiTra[0]) != Number(chuoiTra[2]) &&
-    Number(chuoiTra[2]) == 2 * Number(chuoiTra[0])
+    Number(chuoiTra[2]) == Number(chuoiTra[0]) + Number(chuoiTra[1])
   ) {
     document.getElementById("ket-qua-phan-loai").innerHTML =
       "<p class='alert alert-danger'>Đây không phải là 1 tam giác mà là 1 đường thẳng</p>";
